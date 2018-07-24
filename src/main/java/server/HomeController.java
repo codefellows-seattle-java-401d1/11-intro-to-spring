@@ -43,7 +43,7 @@ public class HomeController {
     //From Steve's slides
     @RequestMapping("/search")
     public String searchTemplate(
-            @RequestParam(name="q", defaultValue="The Beatles") String query,
+            @RequestParam(name="q", defaultValue="Queen") String query,
             Model model
     ) {
         String src = AlbumScraper.getAlbumArtURL(query);

@@ -14,6 +14,7 @@ public class AlbumScraper {
     }
 
     public static String getAlbumArtURL(String query) {
+        String defaultPicture = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjjjq3MrrjcAhWlPH0KHRU-C7MQjRx6BAgBEAU&url=http%3A%2F%2Fwww.vhnsnc.edu.in%2Fspdf.php%3Ffid%3DSCIT8&psig=AOvVaw3OM8YPt0DzHlRGBuouFaB_&ust=1532543235935447";
         try {
             String url = " https://www.discogs.com/search/?q=" + query + "&type=all";
             Document doc = Jsoup.connect(url).get();
@@ -28,8 +29,14 @@ public class AlbumScraper {
         } catch (IOException e) {
             e.printStackTrace();
         } catch (Exception e) {
-            return "/Users/amycohen/codefellows/401/lab-amy/10-album-art-server/src/main/resources/no-record-found.jpg";
+            return defaultPicture;
         }
-        return "/Users/amycohen/codefellows/401/lab-amy/10-album-art-server/src/main/resources/no-record-found.jpg";
+        return defaultPicture;
+
+        /*
+        Yes, I am using hotlinking here. I cannot find a source that tells me how to convert and image into an HTTP file so the source will read correctly. I chose a picture from an educational institution to hopefully avoid nasty images popping up.  I would love some more instruction in this area. Just adding the full path to an actual image did not work here.
+
+        EDIT: Hotlinking didn't work either.
+         */
     }
 }

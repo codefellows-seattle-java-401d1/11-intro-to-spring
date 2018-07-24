@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Cover Result</title>
-    <link rel="stylesheet" href = /css/main.css />
+    <link rel="stylesheet" href = /public/css/main.css />
+
 </head>
 <body>
+    <header>
+        <h1>Album Cover</h1>
+    </header>
 
-    <h1>Album Cover</h1>
-    <p th:text="'You requested album art for: ' + ${query}"> </p>
-    <!--<p>th:href="@{/product/list}" </p>-->
-    <img th:src="${src}" />
+    <div id="result">
+        <div>
+            <p th:text="'You requested album art for: ' + ${query}"> </p>
+        </div>
+        <div id="picture">
+            <img th:src="${src}" />
+        </div>
+    </div>
 
 </body>
 </html>
