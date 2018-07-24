@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Hello</title>
+    <link rel="stylesheet" href = /css/main.css />
+  </head>
+  <body>
+    <div>
+      <h1>Search For Cover Art</h1>
+      <p>The current time is {{TIMESTAMP}}</p>
+    </div>
+
+    <div id="form">
+      <form action="/search" method="GET">
+        <input type="text" name="query">
+        <input type="submit">
+      </form>
+
+    </div>
+
+  </body>
+</html>
