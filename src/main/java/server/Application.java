@@ -12,9 +12,9 @@ public class Application {
         SpringApplication.run(Application.class);
     }
 
-    //from Code.i-harness Q&A about template resolver error with Springboot
+    //from Code.i-harness Q&A about templates resolver error with Springboot
     //https://code.i-harness.com/en/q/f0be91
-    //from StackOverflow to try to resolve my template error:
+    //from StackOverflow to try to resolve my templates error:
     //https://stackoverflow.com/questions/43710326/spring-boot-cannot-change-thymeleaf-template-directory-with-java-config
     @Bean
     public ClassLoaderTemplateResolver yourTemplateResolver() {
