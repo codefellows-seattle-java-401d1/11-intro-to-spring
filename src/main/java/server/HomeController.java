@@ -12,7 +12,7 @@ public class HomeController {
 
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String homePageIndex(){
-        return "index.html";
+        return "index";
     }
 
     //from lecture and lecture repo slides
@@ -26,11 +26,11 @@ public class HomeController {
         model.addAttribute("query", query);
         model.addAttribute("src", src);
 
-        return "cover.html";
+        return "cover";
     }
 
     @RequestMapping("*")
     public String getFallback(){
-        return "not-found.html";
+        return "not-found";
     }
 }
