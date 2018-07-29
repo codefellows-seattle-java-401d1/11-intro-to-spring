@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Album Cover Search Results</title>
+    <link rel="stylesheet" href = /css/main.css />
+</head>
+
+<body>
+    <header>
+        <h1>Search Results</h1>
+    </header>
+
+    <p th:text="'Search result for ' + ${query}"/>
+    <p>Search for another <a href="/">artist or album</a></p>
+
+    <div>
+        <img th:src="${src}" />
+    </div>
+
+</body>
+</html>

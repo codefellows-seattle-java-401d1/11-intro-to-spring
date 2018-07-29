@@ -1,0 +1,17 @@
+body {
+    background-color: #323031;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #E7E9E9;
+    padding: 1em;
+}
+
+div {
+    background-color: #E7E9E9;
+    color: #323031;
+    padding: 20px;
+}
+
+a:link, a:visited {
+    color: #931621;
+    text-decoration: none;
+}
