@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Album Cover Search</title>
+    <link rel="stylesheet" href = /css/main.css />
+</head>
+
+<body>
+    <header>
+        <h1>Album Cover Search</h1>
+    </header>
+
+    <div>
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="Enter an artist or album..."/>
+            <input type="submit"/>
+        </form>
+    </div>
+
+</body>
+</html>
