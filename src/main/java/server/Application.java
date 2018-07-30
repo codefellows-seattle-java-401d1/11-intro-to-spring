@@ -9,7 +9,9 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
+
         SpringApplication.run(Application.class);
+        System.out.println("http://localhost:8080");
     }
 
     //from Code.i-harness Q&A about templates resolver error with Springboot

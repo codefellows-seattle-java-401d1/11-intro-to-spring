@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title> Album Art</title>
+        <link type="text/css" rel="stylesheet" href="css/main.css" >
+    </head>
+    <body>
+        <h1 th:inline="text"> [[${query}]] Album Art Requested: </h1>
+        <img alt="return image of album for artist searched" th:src="${src}" />
+    </body>
+</html>

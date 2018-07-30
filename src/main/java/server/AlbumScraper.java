@@ -18,9 +18,9 @@ public class AlbumScraper {
     }
 
     public static String getAlbumArt(String query) {
-        String defaultImage = "/images/not-found.png";
+        String defaultImage = "/Users/sooz/codefellows/401Java/Labs/11-intro-to-spring/src/main/resources/public/images/not-found.png";
         try {
-            String url = " https://www.discogs.com/search/?q=" + query + "&type=all";
+            String url = "https://www.discogs.com/search/?q=" + query + "&type=all";
             Document doc = Jsoup.connect(url).get();
 
             //search for the album covers
@@ -39,5 +39,6 @@ public class AlbumScraper {
             return defaultImage;
         }
         return defaultImage;
+//        return src;
     }
 }
