@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Album Art Search</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css" >
+</head>
+    <body>
+    <h1>See album art for your favorite albums!</h1>
+        <form action="/search" method="GET">
+            <input type="text" th:name="query" name="query" placeholder="album art to find">
+            <br>
+            <br>
+            <input class="button" type="submit">
+        </form>
+    </body>
+</html>

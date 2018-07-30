@@ -18,15 +18,17 @@ public class HomeController {
 
     //from lecture and lecture repo slides
     //https://github.com/codefellows/seattle-java-401d1/blob/master/class-11-intro-to-spring/intro-to-spring.pdf
-    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    @RequestMapping("/search")
     public String searchTemplate(
-            @RequestParam(name="q", defaultValue = "Beastie Boys") String query,
+            @RequestParam(name="query", defaultValue = "Beastie Boys") String query,
             Model model
     ){
         String src = AlbumScraper.getAlbumArt(query);
         model.addAttribute("query", query);
         model.addAttribute("src", src);
-
+        if (src == "/Users/sooz/codefellows/401Java/Labs/11-intro-to-spring/src/main/resources/public/images/not-found.png") {
+            return "not-found";
+        }
         return "cover";
     }
 
