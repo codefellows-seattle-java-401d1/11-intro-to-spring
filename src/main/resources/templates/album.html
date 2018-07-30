@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cover Result</title>
+    <link rel="stylesheet" href = /css/main.css />
+
+</head>
+<body>
+<header>
+    <h1>Album Cover Photo</h1>
+</header>
+
+<div id="result">
+    <div>
+        <p th:text="'Displaying Album Art For: ' + ${query}"> </p>
+    </div>
+    <div id="picture">
+        <img th:src="${src}" />
+    </div>
+</div>
+
+</body>
+</html>
