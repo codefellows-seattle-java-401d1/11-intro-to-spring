@@ -25,6 +25,8 @@ repositories {
 
 
 dependencies {
+	// https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+	provided group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('org.springframework.boot:spring-boot-devtools')
